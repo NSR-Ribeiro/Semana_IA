@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Marcação de Saúde</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMpZ85X/J1rFh2LZ6Nw9ZCxZ7xMHKjB3I3k5U9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Marcação de Saúde</h1>
+
+        <section>
+            <h2>Agendar Consulta</h2>
+            <form id="agendar-form">
+                <input type="text" id="nome" placeholder="Nome do Paciente" required>
+                <input type="date" id="data" required>
+                <input type="time" id="hora" required>
+                <button type="submit">Agendar</button>
+            </form>
+            <div id="agendar-response"></div>
+        </section>
+
+        <section>
+            <h2>Captação de Áudio</h2>
+            <button id="start-recording"><i class="fas fa-microphone"></i> Gravar Fala</button>
+            <div id="transcription"></div>
+        </section>
+
+        <section>
+            <h2>Consultas Agendadas</h2>
+            <table id="consultas-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="consultas-body"></tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Cancelar Consulta</h2>
+            <input type="number" id="cancelar-id" placeholder="ID da Consulta" required>
+            <button id="cancelar-btn">Cancelar</button>
+            <div id="cancelar-response"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
